@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'pin',
     loadChildren: () => import('./pages/pin/pin.module').then( m => m.PinPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 
