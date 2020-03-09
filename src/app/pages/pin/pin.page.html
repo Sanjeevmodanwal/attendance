@@ -7,28 +7,28 @@
 
 <div class="keypadwrapper">
   <ul class="inputwrapper">
-	<li><span class="numberinput empid1"></span></li>
-	<li><span class="numberinput empid2"></span></li>
-	<li><span class="numberinput empid3"></span></li>
-	<li><span class="numberinput empid4"></span></li>
+	<li><span class="numberinput empid1">{{one}}</span></li>
+	<li><span class="numberinput empid2">{{two}}</span></li>
+	<li><span class="numberinput empid3">{{three}}</span></li>
+	<li><span class="numberinput empid4">{{four}}</span></li>
   </ul>
   <div class="keypad">
     <div class="numberline">
       <div class="content">
         <div>
-          <span class="number" ng-click="handleInput(1)">1</span>
+          <span class="number" (click)="handleInput(1)">1</span>
          
         </div>
       </div>
       <div class="content">
         <div>
-          <span class="number" ng-click="handleInput(2)">2</span>
+          <span class="number" (click)="handleInput(2)">2</span>
          
         </div>
       </div>
       <div class="content">
         <div>
-          <span class="number" ng-click="handleInput(3)">3</span>
+          <span class="number" (click)="handleInput(3)">3</span>
           
         </div>
       </div>
@@ -71,7 +71,7 @@
     <div class="numberline">
       <div class="content">
         <div class=" bg-dark">
-          <span class="number" (click)="handleInput('clear')">X</span>
+          <span class="number" (click)="clear()">X</span>
         </div>
       </div>
       <div class="content">
@@ -81,7 +81,7 @@
       </div>
       <div class="content btnemp">
         <div>
-          <span class="number" (click)="emitEvent()">OK</span>
+          <span class="number" (click)="ok()">OK</span>
         </div>
       </div>
 	 
