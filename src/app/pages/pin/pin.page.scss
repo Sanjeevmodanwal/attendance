@@ -1,0 +1,50 @@
+.keypadwrapper .inputwrapper {
+padding-left:0px; margin-left:0px;
+}
+h3, p, .keypadwrapper { 
+  text-align: center;
+  width: 100%;
+  color: #666;
+}
+.keypadwrapper li {display:inline-block; margin-right:15px;}
+.keypadwrapper li .numberinput {
+display:table-cell;
+  height: 50px; background:#dddddd;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid #aaa;
+  border-collapse: separate;
+           border-spacing: 2px;
+ line-height:50px;position:relative;
+  font-size: 28px;
+}
+
+.keypadwrapper .keypad .numberline {
+  width: 100%;
+}
+
+.keypadwrapper .keypad .content {
+  display: inline-block;
+}
+.keypadwrapper .keypad .content div.bg-dark {background:#898989 !important; color:#fe8689;}
+.keypadwrapper .keypad .content div .flaticon-enter-arrow { color:#52ba49; font-size:24px;}
+.keypadwrapper .keypad .content div {
+  width:50px;
+  height: 50px; margin:15px;
+  text-align: center; background: #282828;
+  border-radius: 5px; color:#fff;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; line-height:50px;
+  
+}
+
+
+.keypadwrapper .keypad .content div span.number {
+ font-size:20px;
+}

@@ -1,5 +1,5 @@
 <ion-content padding>
-  <h6 text-center margin-vertical>{{ pagetitle }}</h6>
+  <!-- <h6 text-center margin-vertical>{{ pagetitle }}</h6> -->
   <!-- <div text-center large margin-vertical> -->
      <!-- <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon> -->
     <!-- <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'">{{number}}</ion-icon> -->
@@ -12,122 +12,211 @@
   <!-- <div class="pin3">{{three}}</div> -->
   <!-- <div class="pin4">{{four}}</div> -->
   
-  <ul class="inputwrapper">
-	<li style="display: inline-block;margin-right: 15px;">
-		<span class="numberinput empid1" valNum="" style="display: table-cell;
-    height: 50px;
-    background: #dddddd;
-    width: 50px;
-    border-radius: 50px;
-    border: 1px solid #aaa;
-    border-collapse: separate;
-    border-spacing: 2px;
-    line-height: 50px;
-    position: relative;
-    font-size: 28px;">{{four}}</span>
-		</li>
-		<li style="display: inline-block;margin-right: 15px;">
-		<span class="numberinput empid1" valNum="" style="display: table-cell;
-    height: 50px;
-    background: #dddddd;
-    width: 50px;
-    border-radius: 50px;
-    border: 1px solid #aaa;
-    border-collapse: separate;
-    border-spacing: 2px;
-    line-height: 50px;
-    position: relative;
-    font-size: 28px;">{{three}}</span>
-		</li>
-		<li style="display: inline-block;margin-right: 15px;">
-		<span class="numberinput empid1" valNum="" style="display: table-cell;
-    height: 50px;
-    background: #dddddd;
-    width: 50px;
-    border-radius: 50px;
-    border: 1px solid #aaa;
-    border-collapse: separate;
-    border-spacing: 2px;
-    line-height: 50px;
-    position: relative;
-    font-size: 28px;">{{two}}</span>
-		</li>
-		<li style="display: inline-block;margin-right: 15px;">
-		<span class="numberinput empid1" valNum="" style="display: table-cell;
-    height: 50px;
-    background: #dddddd;
-    width: 50px;
-    border-radius: 50px;
-    border: 1px solid #aaa;
-    border-collapse: separate;
-    border-spacing: 2px;
-    line-height: 50px;
-    position: relative;
-    font-size: 28px;">{{one}}</span>
-		</li>
-  </ul>
+  <!-- <ul class="inputwrapper"> -->
+	<!-- <li style="display: inline-block;margin-right: 15px;"> -->
+		<!-- <span class="numberinput empid1" valNum="" style="display: table-cell; -->
+    <!-- height: 50px; -->
+    <!-- background: #dddddd; -->
+    <!-- width: 50px; -->
+    <!-- border-radius: 50px; -->
+    <!-- border: 1px solid #aaa; -->
+    <!-- border-collapse: separate; -->
+    <!-- border-spacing: 2px; -->
+    <!-- line-height: 50px; -->
+    <!-- position: relative; -->
+    <!-- font-size: 28px;">{{four}}</span> -->
+		<!-- </li> -->
+		<!-- <li style="display: inline-block;margin-right: 15px;"> -->
+		<!-- <span class="numberinput empid1" valNum="" style="display: table-cell; -->
+    <!-- height: 50px; -->
+    <!-- background: #dddddd; -->
+    <!-- width: 50px; -->
+    <!-- border-radius: 50px; -->
+    <!-- border: 1px solid #aaa; -->
+    <!-- border-collapse: separate; -->
+    <!-- border-spacing: 2px; -->
+    <!-- line-height: 50px; -->
+    <!-- position: relative; -->
+    <!-- font-size: 28px;">{{three}}</span> -->
+		<!-- </li> -->
+		<!-- <li style="display: inline-block;margin-right: 15px;"> -->
+		<!-- <span class="numberinput empid1" valNum="" style="display: table-cell; -->
+    <!-- height: 50px; -->
+    <!-- background: #dddddd; -->
+    <!-- width: 50px; -->
+    <!-- border-radius: 50px; -->
+    <!-- border: 1px solid #aaa; -->
+    <!-- border-collapse: separate; -->
+    <!-- border-spacing: 2px; -->
+    <!-- line-height: 50px; -->
+    <!-- position: relative; -->
+    <!-- font-size: 28px;">{{two}}</span> -->
+		<!-- </li> -->
+		<!-- <li style="display: inline-block;margin-right: 15px;"> -->
+		<!-- <span class="numberinput empid1" valNum="" style="display: table-cell; -->
+    <!-- height: 50px; -->
+    <!-- background: #dddddd; -->
+    <!-- width: 50px; -->
+    <!-- border-radius: 50px; -->
+    <!-- border: 1px solid #aaa; -->
+    <!-- border-collapse: separate; -->
+    <!-- border-spacing: 2px; -->
+    <!-- line-height: 50px; -->
+    <!-- position: relative; -->
+    <!-- font-size: 28px;">{{one}}</span> -->
+		<!-- </li> -->
+  <!-- </ul> -->
  
+<ion-grid text-center>
+<h3>Enter Your PIN</h3>
+<p>Check Profile for PIN code</p>
 
-  <div>
-    <ion-grid text-center>
-      <ion-row>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput(1)">1</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput(2)">2</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput(3)">3</button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('4')">4</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('5')">5</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('6')">6</button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('7')">7</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('8')">8</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('9')">9</button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-
-        </ion-col>
-        <ion-col>
-          <button ion-button round large outline (click)="handleInput('0')">0</button>
-        </ion-col>
-        <ion-col>
-
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <button ion-button clear large no-padding (click)="handleInput('clear')">Clear</button>
-        </ion-col>
-        <ion-col>
-
-        </ion-col>
-        <ion-col>
-          <button ion-button clear large (click)="emitEvent()">OK</button>
-        </ion-col>
-		 <ion-col>
-          <button ion-button clear large (click)="view()">View</button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<div class="keypadwrapper">
+  <ul class="inputwrapper">
+	<li><span class="numberinput empid1" valNum=""></span></li>
+	<li><span class="numberinput empid2" valNum=""></span></li>
+	<li><span class="numberinput empid3" valNum=""></span></li>
+	<li><span class="numberinput empid4" valNum=""></span></li>
+  </ul>
+  <div class="keypad">
+    <div class="numberline">
+      <div class="content">
+        <div>
+          <span class="number" ng-click="handleInput(1)">1</span>
+         
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" ng-click="handleInput(2)">2</span>
+         
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" ng-click="handleInput(3)">3</span>
+          
+        </div>
+      </div>
+    </div>
+    <div class="numberline">
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(4)">4</span>
+         
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(5)">5</span>
+       </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(6)">6</span>
+        </div>
+      </div>
+    </div>
+    <div class="numberline">
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(7)">7</span>
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(8)">8</span>
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(9)">9</span>
+        </div>
+      </div>
+    </div>
+    <div class="numberline">
+      <div class="content">
+        <div class=" bg-dark">
+          <span class="number" (click)="handleInput('clear')">X</span>
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <span class="number" (click)="handleInput(0)">0</span>
+        </div>
+      </div>
+      <div class="content btnemp">
+        <div>
+          <span class="number" (click)="emitEvent()">OK</span>
+        </div>
+      </div>
+	 
+    </div>
   </div>
+</div>
+</ion-grid>
+
+
+  <!-- <div> -->
+    <!-- <ion-grid text-center> -->
+      <!-- <ion-row> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput(1)">1</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput(2)">2</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput(3)">3</button> -->
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('4')">4</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('5')">5</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('6')">6</button> -->
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('7')">7</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('8')">8</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('9')">9</button> -->
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row> -->
+        <!-- <ion-col> -->
+
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button round large outline (click)="handleInput('0')">0</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button clear large no-padding (click)="handleInput('clear')">Clear</button> -->
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+
+        <!-- </ion-col> -->
+        <!-- <ion-col> -->
+          <!-- <button ion-button clear large (click)="emitEvent()">OK</button> -->
+        <!-- </ion-col> -->
+		 <!-- <ion-col> -->
+          <!-- <button ion-button clear large (click)="view()">View</button> -->
+        <!-- </ion-col> -->
+      <!-- </ion-row> -->
+    <!-- </ion-grid> -->
+  <!-- </div> -->
 </ion-content>

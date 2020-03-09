@@ -29,13 +29,15 @@ ngOnInit(){}
 
   
   handleInput(pin) {
-	 var count=[pin]
-	 console.log(count.length);
-     if(count.length==1){
-		 this.one=pin;
-	 }else if(count.length==2){
-		  this.two=pin;
-	 }
+	  let value = this.pin;
+	  console.log(value);
+	 // var count=[pin]
+	 // console.log(count.length);
+     // if(count.length==1){
+		 // this.one=pin;
+	 // }else if(count.length==2){
+		  // this.two=pin;
+	 // }
   }
    
   
