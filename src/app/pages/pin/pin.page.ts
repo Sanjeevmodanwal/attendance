@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LoadingController,ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-pin',
   templateUrl: './pin.page.html',
@@ -13,26 +14,49 @@ export class PinPage implements OnInit {
   three: any;
   four: any;
   number: any;
-  public items: Array<{ username: string; }> = [];
+  public items: Array<{ emp_id: string; }> = [];
   @Input() pagetitle: String = "Enter Pin";
 
   pin: string = "";
 
   @Output() change: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,public loadingController: LoadingController,private toastCtrl: ToastController) { }
+ 
+  
   ngOnInit() { }
   emitEvent() {
     this.change.emit(this.pin);
     let pin = this.pin;
-    alert(this.pin);
+    // alert(this.pin);
+  }
+  
+ async presentToast(msg,color) {
+  const toast = await this.toastCtrl.create({
+    message: msg,
+    duration: 2000,
+    position: 'top',
+	color:color
+  });
+  toast.present();
+}
+  
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Please wait...',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
   }
 
 
   handleInput(pin) {
 
-    this.items.push({ username: pin });
-    console.log(this.items.length);
+    this.items.push({ emp_id: pin });
+    // console.log(this.items.length);
     if (this.items.length == 1) {
       this.one = pin;
     } else if (this.items.length == 2) {
@@ -60,13 +84,32 @@ export class PinPage implements OnInit {
       this.items.pop();
       this.four = "";
     }
-    console.log(this.items.length);
+    // console.log(this.items.length);
   }
 
   ok(){
+	  this.presentLoading();
     let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}), };
-    this.http.post('http://mtree.in/api/chains/chkp',{"data":this.items},httpOptions).subscribe( (data:any) => {
-          console.log(data);
+    this.http.post('http://localhost/api/api.php?tag=checking',{"data":this.items},httpOptions).subscribe( (data:any) => {
+          console.log(data[0]['checkRslt']);
+		  
+		if(data[0]['checkRslt']==1){
+			this.loadingController.dismiss();
+			let msg="Successfully Login";
+			let color="success";
+			this.presentToast(msg,color);
+			this.one = "";
+			this.two = "";
+			this.three = "";
+			this.four = "";
+		}else{
+			this.loadingController.dismiss();
+			let msg='danger';
+			let color="danger";
+			this.presentToast(msg,color);
+		}
+		  
+		  
     });
   }
 

@@ -27,6 +27,11 @@ export class AppComponent implements OnInit {
       url: 'pin',
       icon: 'paper-plane'
     },
+	 {
+      title: 'login',
+      url: 'login',
+      icon: 'paper-plane'
+    },
     {
       title: 'Favorites',
       url: '/folder/Favorites',

@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>
+      Login
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
 
+  <div class="logo"><img src="/assets/logo.png"></div>
+  <h4 class="login">Login</h4>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label position="floating">username</ion-label>
+    <ion-input  type="text"  name="username" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">password</ion-label>
+    <ion-input  type="password" [(ngModel)]="password" name="password"></ion-input>
+  </ion-item>
+
+  
+  <ion-button expand="full"  class="ion-margin-top" (click)="login();">Login <ion-spinner paused></ion-spinner></ion-button>
+</ion-list>
+ 
+   <div class="fog">
+    <a (click)="forget()" class="forget">Forget Password ?</a>
+  </div>
+  <div class="new-user">
+   <ion-button expand="full" color="danger" (click)="registerModal()">New User</ion-button>
+  </div>
 </ion-content>
